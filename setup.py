@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from setuptools import setup, setuptools
+from setuptools import setup, find_packages
 
 def readme():
     with open('README.rst') as f:
@@ -10,7 +10,7 @@ package_data = {'pg_chameleon': ['configuration/config-example.yml','sql/upgrade
 
 setup(
     name="pg_chameleon",
-    version="2.0.19",
+    version="2.0.19post1",
     description="MySQL to PostgreSQL replica and migration",
     long_description=readme(),
     author = "Federico Campoli",
@@ -60,7 +60,7 @@ setup(
     ],
     include_package_data = True,
     package_data=package_data,
-    packages=setuptools.find_packages(),
+    packages=find_packages(),
     python_requires='>=3.5',
     keywords='postgresql mysql replica migration database',
 
